@@ -43,8 +43,8 @@ function generaGriglia(whereGemerateGrid, howManycells, bombs, whereGenerateResu
         
         // check bombs
         square.addEventListener('click', function () {
-            // console.log(bombs);
-            // console.log(square.innerHTML);
+            console.log(bombs);
+            console.log(square.innerHTML);
             if(bombs.includes(Number(square.innerHTML))){
                 for (let i = 0; i < bombs.length; i++) {
                     const bomb = bombs[i];
@@ -67,6 +67,11 @@ function generaGriglia(whereGemerateGrid, howManycells, bombs, whereGenerateResu
                 const allSquareWithClassAcqua = document.querySelectorAll('.acqua');
                 if (allSquareWithClassAcqua.length == (howManycells-bombs.length)){
                     whereGenerateResult.innerText = `Hai Vinto! Il tuo punteggio è di ${allSquareWithClassAcqua.length}`;
+                    const allSquare = document.querySelectorAll('.square');
+                    for (let j = 0; j < allSquare.length; j++) {
+                        const singleSquare = allSquare[j];
+                        singleSquare.style.pointerEvents = 'none';
+                    }
                 }
             }
                   
