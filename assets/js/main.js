@@ -51,17 +51,19 @@ function generaGriglia(whereGemerateGrid, howManycells, bombs, whereGenerateResu
                     const allSquare = document.querySelectorAll('.square');
                     for (let j = 0; j < allSquare.length; j++) {
                         const singleSquare = allSquare[j];
+                        singleSquare.style.pointerEvents = 'none';
                         // console.log(singleSquare.innerHTML);
                         if(singleSquare.innerHTML == bomb){
                             singleSquare.classList.add('bombs');
                             const allSquareWithClassAcqua = document.querySelectorAll('.acqua');
                             result.innerText = `Mi dispiace hai perso. Il tuo punteggio è di ${allSquareWithClassAcqua.length}`;
+                            
                         }
                     }  
                 }
 
             } else{
-                square.classList.toggle('acqua');
+                square.classList.add('acqua');
             }
                   
         });
