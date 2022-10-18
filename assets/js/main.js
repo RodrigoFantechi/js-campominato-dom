@@ -21,6 +21,7 @@ const result = document.querySelector('.result');
 
 button.addEventListener('click', function () {
     container.innerHTML = '';
+    result.innerHTML = '';
     const gridcells = document.querySelector('.form-select').value;
     const bombs = generaBombe(gridcells);
     
