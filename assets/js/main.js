@@ -57,8 +57,7 @@ function generaGriglia(whereGemerateGrid, howManycells, bombs, whereGenerateResu
                         if(singleSquare.innerHTML == bomb){
                             singleSquare.classList.add('bombs');
                             const allSquareWithClassAcqua = document.querySelectorAll('.acqua');
-                            result.innerText = `Mi dispiace hai perso. Il tuo punteggio è di ${allSquareWithClassAcqua.length}`;
-                            
+                            whereGenerateResult.innerText = `Mi dispiace hai perso. Il tuo punteggio è di ${allSquareWithClassAcqua.length}`; 
                         }
                     }  
                 }
