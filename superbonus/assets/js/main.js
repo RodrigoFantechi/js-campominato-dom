@@ -67,6 +67,11 @@ function generaGriglia(whereGemerateGrid, howManycells, bombs, whereGenerateResu
                 const allSquareWithClassAcqua = document.querySelectorAll('.acqua');
                 if (allSquareWithClassAcqua.length == (howManycells-bombs.length)){
                     whereGenerateResult.innerText = `Hai Vinto! Il tuo punteggio è di ${allSquareWithClassAcqua.length}`;
+                    const allSquare = document.querySelectorAll('.square');
+                    for (let j = 0; j < allSquare.length; j++) {
+                        const singleSquare = allSquare[j];
+                        singleSquare.style.pointerEvents = 'none';
+                    }
                 }
             }
                   
