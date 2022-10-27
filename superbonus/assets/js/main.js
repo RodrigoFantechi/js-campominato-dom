@@ -24,10 +24,13 @@ button.addEventListener('click', function () {
     result.innerHTML = '';
     const gridcells = document.querySelector('.form-select').value;
     const bombs = generaBombe(gridcells);
-    
     generaGriglia(container, gridcells, bombs, result);
     
 });
+
+
+
+
 
 function generaGriglia(whereGemerateGrid, howManycells, bombs, whereGenerateResult) {
    
@@ -73,14 +76,10 @@ function generaGriglia(whereGemerateGrid, howManycells, bombs, whereGenerateResu
                         singleSquare.style.pointerEvents = 'none';
                     }
                 }
-            }
-                  
+            } 
         });
     }
 }
-
-
-
 
 function generaBombe(max){
     const bombs = [];
